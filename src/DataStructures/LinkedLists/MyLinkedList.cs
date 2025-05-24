@@ -37,6 +37,7 @@ public class MyLinkedList<T>
 
     #region Add Methods         // Create
 
+    // o(1)
     public void AddLast(T element)
     {
         Node<T> node = new Node<T>(element);
@@ -50,6 +51,7 @@ public class MyLinkedList<T>
         count++;
     }
 
+    // o(1)
     public void AddFirst(T element)
     {
         Node<T> node = new Node<T>(element);
@@ -63,12 +65,63 @@ public class MyLinkedList<T>
         count++;
     }
 
+    // o(n)
+    public void AddAt(T element, int index)
+    {
+        if (index <= 0 || index >= count - 1)
+        {
+            Console.WriteLine("Invalid Index");
+            return;
+        }
+       
+        Node<T> node = new Node<T>(element);
+        Node<T> p = head;
+        int i = 1;
+
+        while (i < index)
+        {
+            p = p.Next;
+            i++;
+        }
+
+        node.Next = p.Next;
+        p.Next = node;
+
+        count++;
+    }
+
     #endregion
 
     #region Query Methods       // Read
     #endregion
 
     #region Delete Methods      // Delete
+
+    // o(1)
+    public T RemoveFirst()
+    {
+        if (IsEmpty)
+        {
+            // TODO: Consider throwing error?
+            Console.WriteLine("List is empty");
+            return default;
+        }
+
+        T element = head.Element;
+
+        head = head.Next;
+        count--;
+
+        if (IsEmpty)
+            tail = null;
+
+        return element;
+    }
+
+    public T RemoveLast() { return default; }
+
+    public T RemoveAt() { return default; }
+
     #endregion
 
     #region Structure Methods   // Manipulation
@@ -76,6 +129,7 @@ public class MyLinkedList<T>
 
     #region Utility Methods     // Debug / Export
 
+    // o(n)
     public void Display()
     {
         Node<T> p = head;
@@ -90,7 +144,7 @@ public class MyLinkedList<T>
             Console.Write($"[{index++}] {p.Element}");
             Console.Write(" -> ");
 
-            if(p.Next == null) Console.Write("∅");
+            if (p.Next == null) Console.Write("∅");
 
             p = p.Next;
         }

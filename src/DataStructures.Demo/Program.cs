@@ -9,10 +9,23 @@ class Program
     {
 
         MyLinkedList<int> l = new MyLinkedList<int>();
+        int element;
+
         l.AddLast(10);
         l.AddLast(20);
         l.AddLast(30);
+        l.Display();
+
         l.AddFirst(40);
+        l.AddFirst(50);
+        l.AddFirst(60);
+        l.Display();
+
+        l.AddAt(111, 1);
+        l.Display();
+
+        element = l.RemoveFirst();
+        Console.WriteLine("Deleted element: {0}", element);
         l.Display();
 
         Console.ReadKey();
