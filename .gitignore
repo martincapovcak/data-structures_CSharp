@@ -1,0 +1,96 @@
+#####################################
+# OS-Specific
+#####################################
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder view settings
+Icon?
+
+# macOS trash folder
+.Trashes
+
+# macOS metadata files
+._*
+
+#####################################
+# IDEs and Editors
+#####################################
+
+# VS Code settings
+.vscode/
+.history/
+
+# Rider (if you ever use it)
+.idea/
+*.sln.iml
+
+#####################################
+# .NET Build Artifacts
+#####################################
+
+# Build outputs
+bin/
+obj/
+TestResults/
+out/
+
+# Razor compiler artifacts
+Generated Files/
+
+# Publish outputs
+*.publish.xml
+*.deps.json
+*.runtimeconfig.json
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Global tool restore cache
+.dotnet_toolstash/
+
+#####################################
+# Logs, Dumps, Coverage, etc.
+#####################################
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+*.user
+*.suo
+*.tmp
+
+# Code coverage
+coverage/
+*.coverage
+*.coveragexml
+*.testresult
+
+# Debug and crash reports
+*.pid
+*.core
+*.dmp
+
+#####################################
+# Local Secrets (optional)
+#####################################
+secrets.json
+appsettings.Development.json
+
+#####################################
+# Others
+#####################################
+
+# StyleCop
+StyleCopReport.xml
+
+# User-specific files
+*.userprefs
+
+# dotnet-watch hot reload artifacts
+.dotnet-watch.json
