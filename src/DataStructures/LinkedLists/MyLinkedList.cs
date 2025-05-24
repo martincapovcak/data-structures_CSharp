@@ -79,14 +79,18 @@ public class MyLinkedList<T>
     public void Display()
     {
         Node<T> p = head;
+        int index = 0;
 
-        Console.Write("Linked List ");
+        Console.Write($"LinkedList<{typeof(T).Name}> ");
+        Console.Write($"[Count = {count}] ");
         Console.Write("{ ");
 
         while (p != null)
         {
-            Console.Write($"v: {p.Element}");
-            Console.Write(" --> ");
+            Console.Write($"[{index++}] {p.Element}");
+            Console.Write(" -> ");
+
+            if(p.Next == null) Console.Write("∅");
 
             p = p.Next;
         }

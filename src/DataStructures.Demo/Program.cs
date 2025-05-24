@@ -14,5 +14,7 @@ class Program
         l.AddLast(30);
         l.AddFirst(40);
         l.Display();
+
+        Console.ReadKey();
     }
 }
