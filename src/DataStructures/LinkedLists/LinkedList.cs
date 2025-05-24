@@ -35,45 +35,74 @@ public class LinkedList<T>
         count = 0;
     }
 
-    // Creates a new node with given value as param at the end of a linked-list
-    public void Append(T value) { }
+    #region Add Methods         // Create
 
-    // Creates a new node with given value as param at the very begining of i linked-list
-    public void Prepend(T value) { }
+    // Creates a new node with the given value at the very beginning of the linked list
+    public void AddFirst(T value) { throw new NotImplementedException(); }
 
-    // Creates new node at certain index with given value
-    public void AddAt(int index, T value) { }
+    // Creates a new node with the given value at the end of the linked list
+    public void AddLast(T value) { throw new NotImplementedException(); }
 
-    // Checks if value exists
-    public bool Contains(T value) { return false; }
+    // Creates a new node with the given value at the specified index
+    public void AddAt(int index, T value) { throw new NotImplementedException(); }
 
-    // Searches for node with value of given param. Returns node index
-    public int IndexOf(T value) { return -1; }
+    #endregion
 
-    // Searches for node at given index as param. Returns node value
-    public T ElementAt(int index) { throw new NotImplementedException(); }
+    #region Query Methods       // Read
 
-    // Removes every node from linked-list which value match the param
-    public bool Remove(T value) { return false; }
+    // Checks if a node with the given value exists in the list
+    public bool Contains(T value) { throw new NotImplementedException(); }
 
-    // Removes node at certain index from linked-list
-    public bool RemoveAt(int index) { return false; }
+    // Returns the index of the node with the given value
+    public int IndexOf(T value) { throw new NotImplementedException(); }
 
-    // Removes last node from linked-list and returnes it
-    public T Pop() { throw new NotImplementedException(); }
+    // Returns the value at the specified index
+    public T GetAt(int index) { throw new NotImplementedException(); }
 
-    // Resets the list
-    public void Clear() { }
+    // Returns the first node that matches the given value
+    public T FindFirstOf(T value) { throw new NotImplementedException(); }
 
-    // Reverse nodes order in the linked-list
-    public void Reverse() { }
+    // Returns the first value that satisfies the given condition
+    public T FindFirstBy(Func<T, bool> predicate) { throw new NotImplementedException(); }
 
-    // Converts linked-list structure to an array
-    public T[] ToArray() { return Array.Empty<T>(); }
+    // Returns all values that satisfy the given condition
+    public List<T> FindAllBy(Func<T, bool> predicate) { throw new NotImplementedException(); }
 
-    // Prints linked-list as a table to console
-    public void Print() { }
+    #endregion
 
-    // Outputs all values to the console
-    public void PrintAll() { }
+    #region Delete Methods      // Delete
+
+    // Removes all nodes that match the given value
+    public bool RemoveAllOf(T value) { throw new NotImplementedException(); }
+
+    // Removes the node at the specified index
+    public bool RemoveAt(int index) { throw new NotImplementedException(); }
+
+    // Removes and returns the last node in the linked list
+    public T PopLast() { throw new NotImplementedException(); }
+
+    #endregion
+
+    #region Structure Methods   // Manipulation
+
+    // Clears all nodes from the list
+    public void Clear() { throw new NotImplementedException(); }
+
+    // Reverses the order of nodes in the linked list
+    public void Reverse() { throw new NotImplementedException(); }
+
+    #endregion
+
+    #region Utility Methods     // Debug / Export
+
+    // Converts the linked list to an array
+    public T[] ToArray() { throw new NotImplementedException(); }
+
+    // Prints the linked list as a formatted table
+    public void PrintTable() { throw new NotImplementedException(); }
+
+    // Outputs all values in the linked list to the console
+    public void PrintValues() { throw new NotImplementedException(); }
+
+    #endregion
 }
