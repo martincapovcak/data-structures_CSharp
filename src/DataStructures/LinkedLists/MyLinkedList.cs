@@ -98,24 +98,23 @@ public class MyLinkedList<T>
     #region Delete Methods      // Delete
 
     // o(1)
-    public T RemoveFirst()
+    public bool TryRemoveFirst(out T value)
     {
         if (IsEmpty)
         {
-            // TODO: Consider throwing error?
-            Console.WriteLine("List is empty");
-            return default;
+            value = default;
+            return false;
         }
 
-        T element = head.Element;
-
+        value = head.Element;
         head = head.Next;
+
         count--;
 
         if (IsEmpty)
             tail = null;
 
-        return element;
+        return true;
     }
 
     public T RemoveLast() { return default; }

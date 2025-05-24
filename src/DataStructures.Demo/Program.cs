@@ -24,7 +24,7 @@ class Program
         l.AddAt(111, 1);
         l.Display();
 
-        element = l.RemoveFirst();
+        l.TryRemoveFirst(out element);
         Console.WriteLine("Deleted element: {0}", element);
         l.Display();
 
